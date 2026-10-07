@@ -1,3 +1,7 @@
 <Solution>
-  <Project Path="Mzansi-Jobs-Api/Mzansi-Jobs-Api.csproj" />
+  <Project Path="Mzansi-Jobs-Api/MzansiJobs.API.csproj" />
+  <Project Path="MzansiJobs.Application/MzansiJobs.Application.csproj" />
+  <Project Path="MzansiJobs.Domain/MzansiJobs.Domain.csproj" />
+  <Project Path="MzansiJobs.Infrastructure/MzansiJobs.Infrastructure.csproj" />
+  <Project Path="MzansiJobs.Tests/MzansiJobs.Tests.csproj" />
 </Solution>
