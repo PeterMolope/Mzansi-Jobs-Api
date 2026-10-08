@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MzansiJobs.Domain.Entities
+﻿namespace MzansiJobs.Domain.Entities
 {
     internal class User
     {
+        int ID;
+        string Email;
+        string passwordHash;
+        string UserRole;
+
+
+
+
+
+
+
     }
 }
