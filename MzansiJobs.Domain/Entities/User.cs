@@ -2,12 +2,12 @@
 {
     internal class User
     {
-        public int ID { get; private set; }
+        public Guid ID { get; private set; }
         public string Email { get; private set; }
         public string passwordHash { get; private set; }
         public string UserRole { get; private set; }
 
-        public User(int id, string email, string passwordHash, string userrole)
+        public User(Guid id, string email, string passwordHash, string userrole)
         {
 
             this.ID = id;
@@ -16,7 +16,7 @@
             this.UserRole = userrole;
         }
 
-        public User(int id, string email, string passwordHash)
+        public User(Guid id, string email, string passwordHash)
         {
 
             this.ID = id;
