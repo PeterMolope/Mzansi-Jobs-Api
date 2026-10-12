@@ -6,6 +6,7 @@
         public string Email { get; private set; }
         public string passwordHash { get; private set; }
         public string UserRole { get; private set; }
+        public ICollection<RefreshToken> RefreshTokens { get; private set; } = new List<RefreshToken>();
 
         public User(Guid id, string email, string passwordHash, string userrole)
         {
