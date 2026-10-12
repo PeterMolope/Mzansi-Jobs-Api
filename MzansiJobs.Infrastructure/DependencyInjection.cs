@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MzansiJobs.Infrastructure
+﻿namespace MzansiJobs.Infrastructure
 {
     internal class DependencyInjection
     {
+        public void AddInfrastructure()
+        {
+
+        }
     }
 }
