@@ -3,8 +3,8 @@
     internal class Candidate : User
     {
         public User User { get; private set; }
-        public Guid ID { get; private set; }
-        public Guid UserID { get; private set; }
+        public Guid ID { get; private set; } // primary key
+        public Guid UserID { get; private set; } // foreign key
         public string firstName { get; private set; }
         public string surname { get; private set; }
         public string? CVUrl { get; private set; }

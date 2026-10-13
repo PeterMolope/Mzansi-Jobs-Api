@@ -2,7 +2,7 @@
 {
     internal class User
     {
-        public Guid ID { get; private set; }
+        public Guid ID { get; private set; } // primary key
         public string Email { get; private set; }
         public string passwordHash { get; private set; }
         public string UserRole { get; private set; }

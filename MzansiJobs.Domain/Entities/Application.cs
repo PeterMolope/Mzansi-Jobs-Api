@@ -18,7 +18,7 @@ namespace MzansiJobs.Domain.Entities
             ID = Guid.NewGuid();
             JobID = jobId;
             CandidateID = candidateId;
-            coverLetter = coverLetter;
+            this.coverLetter = coverLetter;
             dateApplied = DateTime.UtcNow;
             Status = ApplicationStatus.Submitted;
         }
