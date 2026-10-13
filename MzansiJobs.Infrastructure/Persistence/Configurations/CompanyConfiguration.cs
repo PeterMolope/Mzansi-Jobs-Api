@@ -17,7 +17,7 @@ namespace MzansiJobs.Infrastructure.Persistence.Configurations
             builder.Property(c => c.Website).HasMaxLength(512);
             builder.Property(c => c.logoUrl).HasMaxLength(512);
             builder.Property(c => c.Industry).HasConversion<string>().HasMaxLength(50);
-            builder.Property(c => c.Province).HasConversion<string>().HasMaxLength(50);
+            builder.Property(c => c.Province).HasConversion<string>().HasMaxLength(100);
 
             //one to may with job
             builder.HasMany(c => c.jobs)
