@@ -1,10 +1,31 @@
-﻿namespace MzansiJobs.Infrastructure
-{
-    internal class DependencyInjection
-    {
-        public void AddInfrastructure()
-        {
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using MzansiJobs.Infrastructure.Persistence;
 
+namespace MzansiJobs.Infrastructure
+{
+    public static class DependencyInjection
+    {
+        public static IServiceCollection AddInfrastructure(
+            this IServiceCollection services, IConfiguration configuration)
+        {
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseNpgsql(connectionString, npgsqlOptions =>
+                {
+                    // Ensures migrations assembly points to Infrastructure
+                    npgsqlOptions.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName);
+                });
+            });
+
+            // 2. Register Repositories and Services (we will add these next!)
+            // services.AddScoped<IUserRepository, UserRepository>();
+            // services.AddScoped<ITokenService, TokenService>();
+
+            return services;
         }
     }
 }
