@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MzansiJobs.Application.Common.Interfaces;
 using MzansiJobs.Infrastructure.Persistence;
+using MzansiJobs.Infrastructure.Repositories;
+using MzansiJobs.Infrastructure.Services;
 
 namespace MzansiJobs.Infrastructure
 {
@@ -21,9 +24,18 @@ namespace MzansiJobs.Infrastructure
                 });
             });
 
-            // 2. Register Repositories and Services (we will add these next!)
-            // services.AddScoped<IUserRepository, UserRepository>();
-            // services.AddScoped<ITokenService, TokenService>();
+            // Register Repositories and Unit of Work
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IJobRepository, JobRepository>();
+            services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            // security services
+            services.AddScoped<IPasswordHasher, PasswordHasher>();
+            services.AddScoped<ITokenService, TokenService>();
+
+
 
             return services;
         }

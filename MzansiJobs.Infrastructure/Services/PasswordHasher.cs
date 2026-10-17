@@ -1,4 +1,6 @@
-﻿namespace MzansiJobs.Infrastructure.Services
+﻿using MzansiJobs.Application.Common.Interfaces;
+
+namespace MzansiJobs.Infrastructure.Services
 {
     public class PasswordHasher : IPasswordHasher
     {

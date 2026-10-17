@@ -26,7 +26,7 @@
             ID = Guid.NewGuid();
             Token = token;
             UserID = userId;
-            expiresOn = expiresOn;
+            this.expiresOn = expiresOn;
             isRevoked = false;
             isUsed = false;
         }
