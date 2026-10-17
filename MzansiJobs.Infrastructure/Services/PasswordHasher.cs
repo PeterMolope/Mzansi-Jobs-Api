@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MzansiJobs.Infrastructure.Services
+﻿namespace MzansiJobs.Infrastructure.Services
 {
-    internal class PasswordHasher
+    internal class PasswordHasher : IPasswordHasher
     {
+        public string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
+        public bool VerifyPassword(string providedPassword, string hashedPassword)
+        {
+            return BCrypt.Net.BCrypt.Verify(providedPassword, hashedPassword);
+        }
     }
 }

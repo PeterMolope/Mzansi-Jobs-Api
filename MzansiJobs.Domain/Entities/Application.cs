@@ -13,6 +13,11 @@ namespace MzansiJobs.Domain.Entities
         public DateTime dateApplied { get; private set; }
         public string? coverLetter { get; private set; }
 
+        public Application()
+        {
+
+        }
+
         public Application(Guid jobId, Guid candidateId, string? coverLetter = null)
         {
             ID = Guid.NewGuid();

@@ -16,8 +16,13 @@ namespace MzansiJobs.Infrastructure.Persistence.Configurations
             builder.Property(rt => rt.createdAt).IsRequired();
             builder.Property(rt => rt.expiresOn).IsRequired();
             builder.Property(rt => rt.isRevoked).IsRequired();
-            builder.Property(rt => rt.IsActive).IsRequired();
-            builder.Property(rt => rt.IsExpired).IsRequired();
+
+            // builder.Property(rt => rt.IsActive).IsRequired();
+            // builder.Property(rt => rt.IsExpired).IsRequired();
+
+            builder.Ignore(rt => rt.IsActive);
+            builder.Ignore(rt => rt.IsExpired);
+
             builder.Property(rt => rt.isUsed).IsRequired();
 
             // index token for fast lookups during refresh

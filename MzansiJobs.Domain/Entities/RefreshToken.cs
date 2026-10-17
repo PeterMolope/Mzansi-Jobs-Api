@@ -16,6 +16,11 @@
         public bool IsExpired => DateTime.UtcNow >= expiresOn;
         public bool IsActive => !isRevoked && !IsExpired && !isUsed;
 
+        public RefreshToken()
+        {
+
+        }
+
         public RefreshToken(string token, Guid userId, DateTime expiresOn)
         {
             ID = Guid.NewGuid();
