@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Enums
 {
-    internal enum ApplicationStatus
+    public enum ApplicationStatus
     {
         Submitted,
 

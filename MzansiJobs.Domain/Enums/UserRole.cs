@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Enums
 {
-    internal enum UserRole
+    public enum UserRole
     {
         Candidate, Employer, Admin
     }

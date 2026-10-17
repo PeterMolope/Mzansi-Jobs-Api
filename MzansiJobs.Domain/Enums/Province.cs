@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Enums
 {
-    internal enum Province
+    public enum Province
     {
         Gauteng,
         WesternCape,

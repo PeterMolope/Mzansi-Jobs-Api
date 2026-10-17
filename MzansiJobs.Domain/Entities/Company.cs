@@ -2,7 +2,7 @@
 
 namespace MzansiJobs.Domain.Entities
 {
-    internal class Company
+    public class Company
     {
 
 

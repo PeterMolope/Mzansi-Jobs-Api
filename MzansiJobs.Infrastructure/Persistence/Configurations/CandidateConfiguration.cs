@@ -4,7 +4,7 @@ using MzansiJobs.Domain.Entities;
 
 namespace MzansiJobs.Infrastructure.Persistence.Configurations
 {
-    internal class CandidateConfiguration : IEntityTypeConfiguration<Candidate>
+    public class CandidateConfiguration : IEntityTypeConfiguration<Candidate>
     {
         public void Configure(EntityTypeBuilder<Candidate> builder)
         {

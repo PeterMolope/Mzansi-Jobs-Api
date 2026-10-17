@@ -2,7 +2,7 @@
 
 namespace MzansiJobs.Domain.Entities
 {
-    internal class Application
+    public class Application
     {
         public Guid ID { get; private set; }
         public Job Job { get; private set; }

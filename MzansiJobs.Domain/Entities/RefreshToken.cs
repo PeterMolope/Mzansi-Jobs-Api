@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Entities
 {
-    internal class RefreshToken
+    public class RefreshToken
     {
         public Guid ID { get; private set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Entities
 {
-    internal class User
+    public class User
     {
         public Guid ID { get; private set; } // primary key
         public string Email { get; private set; }

@@ -1,3 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("MzansiJobs.Infrastructure")]
+[assembly: publicsVisibleTo("MzansiJobs.Infrastructure")]
+[assembly: publicsVisibleTo("MzansiJobs.Application")]

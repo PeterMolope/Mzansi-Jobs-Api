@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Enums
 {
-    internal enum Industry
+    public enum Industry
     {
         InformationTechnology,
 

@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Enums
 {
-    internal enum EmploymentType
+    public enum EmploymentType
     {
         FullTime,
         PartTime,

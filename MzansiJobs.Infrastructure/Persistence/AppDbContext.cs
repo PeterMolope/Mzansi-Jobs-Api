@@ -4,12 +4,12 @@ using System.Reflection;
 
 namespace MzansiJobs.Infrastructure.Persistence
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<User> Users => Set<User>();
         public DbSet<Candidate> Candidates => Set<Candidate>();
         public DbSet<Employer> Employers => Set<Employer>();
-        public DbSet<Application> Applications => Set<Application>();
+        public DbSet<MzansiJobs.Domain.Entities.Application> Applications => Set<MzansiJobs.Domain.Entities.Application>();
         public DbSet<Company> Companies => Set<Company>();
         public DbSet<Skill> Skills => Set<Skill>();
         public DbSet<JobSkill> JobSkills => Set<JobSkill>();

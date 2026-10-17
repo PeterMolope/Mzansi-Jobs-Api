@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MzansiJobs.Application\MzansiJobs.Application.csproj" />
     <ProjectReference Include="..\MzansiJobs.Domain\MzansiJobs.Domain.csproj" />
   </ItemGroup>
 

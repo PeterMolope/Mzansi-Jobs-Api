@@ -1,6 +1,6 @@
 ﻿namespace MzansiJobs.Domain.Entities
 {
-    internal class Skill
+    public class Skill
     {
 
         public Guid ID { get; private set; }
