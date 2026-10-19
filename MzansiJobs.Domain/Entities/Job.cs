@@ -20,7 +20,7 @@ namespace MzansiJobs.Domain.Entities
 
         public Job() { }
 
-        public Job(string title, string description, Province province, EmploymentType employmentType, Guid companyId, decimal? salary = null)
+        public Job(string title, string description, Province province, EmploymentType employmentType, Guid companyId, decimal? salary = null, DateTime? expirationDate = null)
         {
             ID = Guid.NewGuid();
             Title = title;
@@ -30,6 +30,7 @@ namespace MzansiJobs.Domain.Entities
             CompanyID = companyId;
             salaryRange = salary;
             postedDate = DateTime.UtcNow;
+            this.expirationDate = expirationDate;
             isActive = true;
         }
 

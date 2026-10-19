@@ -4,7 +4,7 @@ using MzansiJobs.Domain.Enums;
 
 namespace MzansiJobs.Application.Features.Authentication.Commands
 {
-    internal class RegisterUserCommand : IRequest<AuthResponseDTO>
+    public class RegisterUserCommand : IRequest<AuthResponseDTO>
     {
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
