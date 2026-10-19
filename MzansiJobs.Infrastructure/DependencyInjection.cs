@@ -28,8 +28,10 @@ namespace MzansiJobs.Infrastructure
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IJobRepository, JobRepository>();
             services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+            services.AddScoped<ICandidateRepository, CandidateRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
             // security services
             services.AddScoped<IPasswordHasher, PasswordHasher>();

@@ -11,17 +11,20 @@ namespace MzansiJobs.Infrastructure.Repositories
         public IUserRepository Users { get; }
         public IJobRepository Jobs { get; }
         public IRefreshTokenRepository RefreshTokens { get; }
+        public ICandidateRepository Candidates { get; }
 
         public UnitOfWork(
             AppDbContext context,
             IUserRepository users,
             IJobRepository jobs,
-            IRefreshTokenRepository refreshTokens)
+            IRefreshTokenRepository refreshTokens,
+            ICandidateRepository candidates)
         {
             _context = context;
             Users = users;
             Jobs = jobs;
             RefreshTokens = refreshTokens;
+            Candidates = candidates;
         }
 
         public IGenericRepository<TEntity> Repository<TEntity>() where TEntity : class
