@@ -24,5 +24,13 @@
             this.firstName = firstName;
             this.surname = surname;
         }
+        public void UpdateProfile(string firstName, string lastName, string? phone, string? resumeUrl, string? summary)
+        {
+            this.firstName = firstName;
+            this.surname = lastName;
+            this.phoneNumber = phone;
+            this.CVUrl = resumeUrl;
+            this.bio = summary;
+        }
     }
 }
