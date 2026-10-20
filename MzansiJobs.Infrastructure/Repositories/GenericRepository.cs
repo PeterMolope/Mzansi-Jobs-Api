@@ -39,5 +39,9 @@ namespace MzansiJobs.Infrastructure.Repositories
         {
             _dbSet.Remove(entity);
         }
+        public IQueryable<T> GetQueryable()
+        {
+            return _context.Set<T>();
+        }
     }
 }
