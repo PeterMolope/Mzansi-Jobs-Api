@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MediatR;
+using MzansiJobs.Application.Common.DTOs.Jobs;
 
 namespace MzansiJobs.Application.Features.Jobs.Queries
 {
-    internal class GetJobByIdQuery
-    {
-    }
+    public record GetJobByIdQuery(Guid Id) : IRequest<JobDetailsDTO>;
 }
