@@ -27,5 +27,14 @@ namespace MzansiJobs.Domain.Entities
         public Company()
         {
         }
+        public void UpdateDetails(string name, string? description, Province province, Industry industry, string? website, string? logoUrl)
+        {
+            Name = name;
+            Description = description;
+            Province = province;
+            Industry = industry;
+            Website = website;
+            this.logoUrl = logoUrl;
+        }
     }
 }
