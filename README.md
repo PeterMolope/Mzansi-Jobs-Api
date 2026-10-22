@@ -1,5 +1,9 @@
 # Mzansi Jobs API
 
+## Author
+
+Built by **Peter Molope** as a full-stack backend engineering project demonstrating modern .NET API development, secure authentication, relational data modeling, and maintainable application architecture.
+
 A secure, modular REST API for connecting candidates, employers, companies, and job opportunities across South Africa.
 
 Mzansi Jobs API is built with **.NET 10**, **ASP.NET Core**, **Entity Framework Core**, **PostgreSQL**, **MediatR**, **JWT authentication**, and **Swagger UI**. The project demonstrates clean separation of concerns, domain-driven organization, role-based authorization, and production-oriented API practices.
