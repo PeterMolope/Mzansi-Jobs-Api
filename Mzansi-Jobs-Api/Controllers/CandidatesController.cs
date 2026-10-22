@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MzansiJobs.Application.Common.DTOs.Candidates;
+using MzansiJobs.Application.Features.Candidates.Commands;
+using MzansiJobs.Application.Features.Candidates.Queries;
 
 namespace Mzansi_Jobs_Api.Controllers
 {

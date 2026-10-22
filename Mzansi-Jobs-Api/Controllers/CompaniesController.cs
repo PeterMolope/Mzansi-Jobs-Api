@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MzansiJobs.Application.Common.DTOs.Companies;
+using MzansiJobs.Application.Features.Companies.Commands;
+using MzansiJobs.Application.Features.Companies.Queries;
 
 namespace Mzansi_Jobs_Api.Controllers
 {
@@ -39,6 +42,25 @@ namespace Mzansi_Jobs_Api.Controllers
         {
             var companyId = await _mediator.Send(command);
             return CreatedAtAction(nameof(GetCompanyById), new { id = companyId }, companyId);
+        }
+
+        /// <summary>
+        /// Update an existing company profile.
+        /// </summary>
+        [HttpPut("{id:guid}")]
+        [Authorize(Roles = "Employer,Admin")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> UpdateCompany(Guid id, [FromBody] UpdateCompanyCommand command)
+        {
+            if (id != command.CompanyId)
+            {
+                return BadRequest("Mismatched company ID in route and request body.");
+            }
+
+            await _mediator.Send(command);
+            return NoContent();
         }
     }
 }
